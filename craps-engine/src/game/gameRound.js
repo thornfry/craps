@@ -3,11 +3,9 @@ import { evaluatePayout } from '../bets';
 
 export const gameRound = () => {
   let point;
-  const getPoint = () => {
-    return point;
-  }
+  let rollResult;
   const rollAndPayout = (bets) => {
-    const rollResult = shoot(point);
+    rollResult = shoot(point);
     if (rollResult.outcome === rollOutcomes.pointEstablished) {
       point = rollResult.value;
     } else if (rollResult.outcome === rollOutcomes.pointNotMade) {
@@ -20,6 +18,7 @@ export const gameRound = () => {
   }
   return {
     rollAndPayout,
-    getPoint
+    getPoint: () => point,
+    getLastRoll: () => rollResult
   }
 }

@@ -1,4 +1,4 @@
-import { roll2d6 } from '../baseMechanics/roll2d6';
+import { roll2d6 } from '../baseMechanics';
 import { defineShooterRoll } from './defineShooterRoll';
 
 export const shoot = (point) => {

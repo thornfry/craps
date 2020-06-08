@@ -1,4 +1,4 @@
-import rollDie from './rollDie';
+import { rollDie } from './rollDie';
 
 describe('rollDie', () => {
   const testDieFaces = 10;

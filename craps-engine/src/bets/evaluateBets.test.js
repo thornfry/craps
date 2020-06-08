@@ -1,4 +1,4 @@
-import { evaluatePayout } from './evaluateBets';
+import { evaluatePayout } from './evaluatePayout';
 import { betType } from './betType';
 import { rollOutcomes } from '../shooter';
 
