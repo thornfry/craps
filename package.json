@@ -1,19 +1,16 @@
 {
+  "private": true,
   "name": "craps",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "jest",
-    "build": "rimraf dist && babel src --out-dir dist"
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git@github.com-thornfry:thornfry/craps.git"
   },
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "@babel/cli": "^7.10.1",
-    "@babel/core": "^7.10.2",
-    "@babel/preset-env": "^7.10.2",
-    "babel-jest": "^26.0.1",
-    "jest": "^26.0.1"
-  }
+  "workspaces": [
+    "craps-engine"
+  ]
 }
