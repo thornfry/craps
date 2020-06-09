@@ -29,16 +29,16 @@ describe('crapsTable', () => {
     it('should add to players existing balance', () => {
       const table = crapsTable();
       const playerId = table.addPlayer('Will', 200);
-      table.adjustPlayerBalance(playerId, 100);
-      expect(table.getPlayers()[playerId].balance).toEqual(300);
+      const newBalance = table.adjustPlayerBalance(playerId, 100);
+      expect(newBalance).toEqual(300);
     });
     it('should subtract from players existing balance', () => {
       const table = crapsTable();
       const playerId = table.addPlayer('Will', 200);
-      table.adjustPlayerBalance(playerId, -100);
-      expect(table.getPlayers()[playerId].balance).toEqual(100);
+      const newBalance = table.adjustPlayerBalance(playerId, -100);
+      expect(newBalance).toEqual(100);
     });
-    it('should subtract from players existing balance', () => {
+    it('should set players balance', () => {
       const table = crapsTable();
       const playerId = table.addPlayer('Will', 200);
       table.setPlayerBalance(playerId, 600);
@@ -58,15 +58,17 @@ describe('crapsTable', () => {
       expect(table.getBets()[0]).toEqual(expected);
     });
   });
-  describe('roll', () => {
+  xdescribe('roll', () => {
     it('should play the game', () => {
       const table = crapsTable();
       const playerId = table.addPlayer('Will');
+      const gab = table.addPlayer('Gab');
       const expected = {
         playerId,
         type: betType.dontPass,
         amount: 10
       };
+      table.placeBet(gab, betType.pass, 10);
       table.placeBet(expected.playerId, expected.type, expected.amount);
       while(table.getBets().length) {
         table.roll();

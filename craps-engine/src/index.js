@@ -14,7 +14,8 @@ export {
 } from './bets';
 
 export {
-  gameRound
+  gameRound,
+  crapsTable
 } from './game'
 
 export {

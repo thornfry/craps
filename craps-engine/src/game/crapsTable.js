@@ -27,6 +27,7 @@ export const crapsTable = () => {
       ...player,
       balance
     }
+    return balance;
   }
 
   const setPlayerBalance = (playerId, balance) => {
@@ -48,10 +49,10 @@ export const crapsTable = () => {
 
   // #region game round
   const roll = () => {
-    console.log('Rolling!')
+    // console.log('Rolling!')
     const resolvedBets = game.rollAndPayout(bets);
-    const roll = game.getLastRoll();
-    console.log('Player rolled: ', roll);
+    const lastRoll = game.getLastRoll();
+    console.log('Player rolled: ', lastRoll);
     const completed = resolvedBets.filter(x => x.payout !== undefined);
     const liveBets = resolvedBets.filter(x => x.payout === undefined);
     completed.forEach(x => {
@@ -59,6 +60,7 @@ export const crapsTable = () => {
       adjustPlayerBalance(x.playerId, x.payout);
     })
     bets = liveBets;
+    return lastRoll;
   }
   // #endregion
 
@@ -66,6 +68,7 @@ export const crapsTable = () => {
     addPlayer,
     removePlayer,
     getPlayers: () => players,
+    getPlayer: (playerId) => players[playerId],
     adjustPlayerBalance,
     setPlayerBalance,
     placeBet,

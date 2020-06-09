@@ -11,7 +11,7 @@ describe('evaluatePayout', () => {
     }
     const bet = {
       id: 123,
-      owner: 'will',
+      playerId: 0,
       type: betType.pass,
       amount: 10
     }
@@ -26,7 +26,7 @@ describe('evaluatePayout', () => {
     }
     const bet = {
       id: 123,
-      owner: 'will',
+      playerId: 0,
       type: betType.dontPass,
       amount: 10
     }
