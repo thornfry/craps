@@ -6,6 +6,7 @@ export const dontPassBetEvaluator = (roll, rollOutcome, betAmount) => {
     case rollOutcomes.pointMade:
       return 0;
     case rollOutcomes.craps:
+      // TODO: should this just compare with roll?
       return roll[0] + roll[1] === 12 ? betAmount : 2 * betAmount;
     case rollOutcomes.lose:
       return 2 * betAmount
