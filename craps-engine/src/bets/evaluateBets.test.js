@@ -33,4 +33,19 @@ describe('evaluatePayout', () => {
     const actual = evaluatePayout([bet], testRoll);
     expect(actual).toEqual([{ ...bet, payout: 0 }])
   });
+  it('should add points to bets that need it', () => {
+    const testRoll = {
+      roll: [1, 4],
+      value: 5,
+      outcome: rollOutcomes.pointEstablished
+    }
+    const bet = {
+      id: 123,
+      playerId: 0,
+      type: betType.come,
+      amount: 10
+    }
+    const actual = evaluatePayout([bet], testRoll);
+    expect(actual).toEqual([{ ...bet, point: 5 }])
+  });
 });
