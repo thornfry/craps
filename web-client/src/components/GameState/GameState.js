@@ -1,12 +1,12 @@
 import React from 'react';
 import { useGameState } from '../../context'
 export const GameState = () => {
-  const { roll, bets, balance } = useGameState();
+  const { rollResult, bets, balance } = useGameState();
   return (
     <>
-      <div>Dice: {roll?.roll}</div>
-      <div>Outcome: {roll?.outcome}</div>
-      <div>Bets: {bets}</div>
+      <div>Dice: {JSON.stringify(rollResult.roll)}</div>
+      <div>Outcome: {rollResult?.outcome}</div>
+      <div>Bets: {JSON.stringify(bets)}</div>
       <div>Balance: {balance}</div>
     </>
   )

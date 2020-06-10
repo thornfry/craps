@@ -2,7 +2,7 @@ import React from 'react';
 import table from '../../table1280x640.png';
 import { useStyles } from './Table.styles';
 
-export const Table = (props) => {
+export const Table = () => {
   const classes = useStyles({});
   const handleClick = (event) => {
     alert('Clicked ' + event.target.alt);

@@ -18,10 +18,14 @@ export const gameStateStub = () => {
       .filter(x => x.playerId === playerId);
   }
   const roll = (playerId) => {
+    const rollResult = table.roll();
+    const balance = table.getPlayer(playerId).balance;
+    const bets = table.getBets();
+    console.log('stub: ', balance, bets)
     return {
-      rollResult: table.roll(),
-      balance: table.getPlayer(playerId).balance,
-      bets: table.getBets()
+      rollResult,
+      balance,
+      bets
     }
   }
 

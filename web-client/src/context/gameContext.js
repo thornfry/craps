@@ -7,6 +7,26 @@ const GameDispatchContext = React.createContext();
 
 const gameStateReducer = (state, action) => {
   switch (action.type) {
+    case 'setPlayerId':
+      return {
+        ...state,
+        playerId: action.payload
+      }
+    case 'setBalance':
+      return {
+        ...state,
+        balance: action.payload
+      }
+    case 'setBets':
+      return {
+        ...state,
+        bets: action.payload
+      }
+    case 'setRollResult':
+      return {
+        ...state,
+        rollResult: action.payload
+      }
     case 'update':
       return {
         ...state,
@@ -17,14 +37,15 @@ const gameStateReducer = (state, action) => {
   }
 }
 
-const GameStateProvider = ({children}) => {
+const GameStateProvider = ({ children }) => {
   const defaultState = {
     game: gameStateStub(),
-    roll: {},
+    rollResult: {},
     bets: [],
     balance: 0
   }
   const [state, dispatch] = React.useReducer(gameStateReducer, defaultState)
+  console.log('Provider state: ', state)
   return (
     <GameStateContext.Provider value={state}>
       <GameDispatchContext.Provider value={dispatch}>
@@ -43,7 +64,7 @@ const useGameState = () => {
 }
 
 const useGameDispatch = () => {
-  const context = React.useContext(GameStateContext);
+  const context = React.useContext(GameDispatchContext);
   if (context === undefined) {
     throw new Error('useGameDispatch must be used within a GameStateProvider')
   }
