@@ -15,7 +15,7 @@ export const PlayArea = () => {
         <GameInit />
         <Table />
         <GameState />
-        <PlaceBets />
+        {/* <PlaceBets /> */}
         <Roll />
       </GameStateProvider>
     </div>
