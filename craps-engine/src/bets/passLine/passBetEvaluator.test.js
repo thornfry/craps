@@ -1,5 +1,5 @@
 import { passBetEvaluator } from './passBetEvaluator';
-import { rollOutcomes } from '../shooter';
+import { rollOutcomes } from '../../shooter';
 
 describe('passLineEvaluator', () => {
   it('should return double the bet on comeout wins', () => {

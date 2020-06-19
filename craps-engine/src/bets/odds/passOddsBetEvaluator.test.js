@@ -1,5 +1,5 @@
 import { passOddsBetEvaluator } from './passOddsBetEvaluator';
-import { rollOutcomes } from '../shooter';
+import { rollOutcomes } from '../../shooter';
 
 describe('passOddsBetEvaluator', () => {
   it('should return zero on lose', () => {

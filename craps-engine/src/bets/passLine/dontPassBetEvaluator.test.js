@@ -1,4 +1,4 @@
-import { rollOutcomes } from '../shooter';
+import { rollOutcomes } from '../../shooter';
 import { dontPassBetEvaluator } from './dontPassBetEvaluator';
 
 describe('dontPassBetEvaluator', () => {

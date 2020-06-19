@@ -1,11 +1,11 @@
 import { betType } from './betType';
 import { mergeDefinedProperties } from '../utils';
-import { passBetEvaluator } from './passBetEvaluator';
-import { passOddsBetEvaluator } from './passOddsBetEvaluator';
-import { dontPassBetEvaluator } from './dontPassBetEvaluator';
-import { dontPassOddsBetEvaluator } from './dontPassOddsBetEvaluator';
-import { dontComeBetEvaluator } from './dontComeBetEvaluator';
-import { comeBetEvaluator } from './comeBetEvaluator';
+import { passBetEvaluator } from './passLine/passBetEvaluator';
+import { passOddsBetEvaluator } from './odds/passOddsBetEvaluator';
+import { dontPassBetEvaluator } from './passLine/dontPassBetEvaluator';
+import { dontPassOddsBetEvaluator } from './odds/dontPassOddsBetEvaluator';
+import { dontComeBetEvaluator } from './come/dontComeBetEvaluator';
+import { comeBetEvaluator } from './come/comeBetEvaluator';
 
 export const evaluatePayout = (bets, rollResult) => {
   return bets.map(x => {

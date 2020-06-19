@@ -1,6 +1,14 @@
-export { betType } from './betType';
-export { dontPassBetEvaluator } from './dontPassBetEvaluator';
-export { dontPassOddsBetEvaluator } from './dontPassOddsBetEvaluator';
-export { evaluatePayout } from './evaluatePayout';
-export { passBetEvaluator } from './passBetEvaluator';
-export { passOddsBetEvaluator } from './passOddsBetEvaluator';
+export {
+  comeBetEvaluator,
+  dontComeBetEvaluator
+} from './come';
+
+export {
+  passOddsBetEvaluator,
+  dontPassOddsBetEvaluator
+} from './odds';
+
+export {
+  passBetEvaluator,
+  dontPassBetEvaluator
+} from './passLine';

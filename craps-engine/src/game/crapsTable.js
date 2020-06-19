@@ -41,8 +41,8 @@ export const crapsTable = () => {
   // #endregion
   
   // #region bets
-  const placeBet = (playerId, type, amount) => {
-    bets.push({ playerId, type, amount })
+  const placeBet = (playerId, type, amount, point) => {
+    bets.push({ playerId, type, amount, point })
   }
 
   // #endregion

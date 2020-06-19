@@ -1,4 +1,4 @@
-import { rollOutcomes } from '../shooter';
+import { rollOutcomes } from '../../shooter';
 
 export const dontPassBetEvaluator = (roll, rollOutcome, betAmount) => {
   switch (rollOutcome) {

@@ -1,5 +1,5 @@
-import { rollOutcomes } from '../shooter';
-import { getOddsForPoint } from '../baseMechanics';
+import { rollOutcomes } from '../../shooter';
+import { getOddsForPoint } from '../../baseMechanics';
 
 export const passOddsBetEvaluator = (roll, rollOutcome, betAmount) => {
   switch (rollOutcome) {

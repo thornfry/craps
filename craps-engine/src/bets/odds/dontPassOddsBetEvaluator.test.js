@@ -1,5 +1,5 @@
 import { dontPassOddsBetEvaluator } from './dontPassOddsBetEvaluator';
-import { rollOutcomes } from '../shooter';
+import { rollOutcomes } from '../../shooter';
 
 describe('dontPassOddsBetEvaluator', () => {
   it('should return zero on pointmade', () => {

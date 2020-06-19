@@ -1,4 +1,4 @@
-import { isNumberInSet } from '../utils/isNumberInSet';
+import { isNumberInSet } from '../../utils/isNumberInSet';
 
 export const comeBetEvaluator = (roll, betAmount, point) => {
   let establishedPoint = point;
